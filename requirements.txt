@@ -1,0 +1,6 @@
+certifi==2023.7.22
+httpcore==0.17.3
+httpx==0.24.1
+python-dotenv==1.0.0
+slack-sdk==3.21.3
+fastapi==0.101.1
