@@ -3,7 +3,7 @@ import httpx
 
 app = FastAPI()
 
-SLACK_URL = "https://hooks.slack.com/services/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"
+SLACK_URL = "https://hooks.slack.com/services/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"
 
 @app.api_route("/send-to-slack/", methods=["POST", "GET"])
 async def send_to_slack():
