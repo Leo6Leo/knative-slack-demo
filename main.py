@@ -1,9 +1,15 @@
 from fastapi import FastAPI
 import httpx
+from dotenv import load_dotenv
+import os #provides ways to access the Operating System and allows us to read the environment variables
 
+load_dotenv()
 app = FastAPI()
 
-SLACK_URL = "https://hooks.slack.com/services/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"
+# get the variable from the environment variables
+from os import environ
+
+SLACK_URL = os.getenv("WEBHOOK_LINK")
 
 @app.api_route("/send-to-slack/", methods=["POST", "GET"])
 async def send_to_slack():
